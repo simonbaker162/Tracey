@@ -3,17 +3,17 @@ If you want to change a theme's colour (or if new tabs are being added and there
 
 1) MARKUP: In index.html, set the data-theme-hex property to the hex value of your chosen colour for the div element that represents the tab of the form you are changing or adding a theme for:
 
-<div class="tab names-tab" id="namesFormTab" data-theme-hex="#ff858b">Names</div>
+<div class="tab names-tab" id="namesFormTab" data-theme-hex="#85b0ff">Names</div>
 
 
-2) STYLING: In styles.css, change the background colour property for the relevant tab and form classes (e.g. ".names-tab" and ".names-form").
+2) STYLING: In base.css, change the background colour property for the relevant tab and form classes (e.g. ".names-tab" and ".names-form").
 
  .names-tab {
-    background-color: #ff858b;
+    background-color: #85b0ff;
   }
 
   .names-form {
-    background-color: #ff858b;
+    background-color: #85b0ff;
   }
 
 
