@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://kit.fontawesome.com/388073ed16.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./css/normalize.css" type="text/css" />
+		<link rel="stylesheet" href="./css/base.css" type="text/css" />
+		<link rel="stylesheet" href="./css/themes.css" type="text/css" />
+		<link rel="stylesheet" href="./css/medias.css" type="text/css" />
+		<link rel="stylesheet" href="./css/print.css" type="text/css" />
+		<title>Tracey</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="heading-area-container">
+				<div class="children-img-container">
+					<img
+						src="./img/children-blue.svg"
+						alt="Image of two children"
+						class="img children-img"
+						id="children-img-names"
+					/>
+					<img
+						src="./img/children-pink.svg"
+						alt="Image of two children"
+						class="img children-img"
+						id="children-img-words"
+					/>
+					<img
+						src="./img/children-green.svg"
+						alt="Image of two children"
+						class="img children-img"
+						id="children-img-alphabet"
+					/>
+					<img
+						src="./img/children-orange.svg"
+						alt="Image of two children"
+						class="img children-img"
+						id="children-img-numbers"
+					/>
+				</div>
+				<h1 class="heading" id="heading">Tracey</h1>
+			</div>
+
+			<div class="instructions-area-container">
+				<div class="instructions-area-box">
+					<h2 class="subheading">Create Customisable Pre-School Tracing Resources!</h2>
+					<p>
+						Welcome to Tracey, a tool for creating printer-friendly customisable tracing resources which can be used for
+						activities with pre-school children in nurseries and at home. Use the form below to get started.
+					</p>
+
+					<p>
+						Printer friendly! When you print this page, we won't print out everything, just your personalised resources.
+						Each child's sheet will start on a separate page.
+					</p>
+
+					<div class="options-img-container">
+						<img
+							src="./img/options-blue.svg"
+							alt="Image of a person looking at different options for the app"
+							class="img options-img"
+							id="options-img-names"
+						/>
+						<img
+							src="./img/options-pink.svg"
+							alt="Image of a person looking at different options for the app"
+							class="img options-img"
+							id="options-img-words"
+						/>
+						<img
+							src="./img/options-green.svg"
+							alt="Image of a person looking at different options for the app"
+							class="img options-img"
+							id="options-img-alphabet"
+						/>
+						<img
+							src="./img/options-orange.svg"
+							alt="Image of a person looking at different options for the app"
+							class="img options-img"
+							id="options-img-numbers"
+						/>
+					</div>
+				</div>
+
+				<div class="instructions-area-box">
+					<h2 class="subheading">Instructions</h2>
+					<p>
+						<span class="bold">Child Name (required):</span> Fill in the child's name to personalise their printed
+						worksheet. For the Names form, this is also what will be printed out for the child to trace.
+					</p>
+
+					<p>
+						<span class="bold">Font Size (required):</span> Choose between large, medium or small font size (font
+						heights of 4cm, 3cm and 2cm respectively when printed).
+					</p>
+					<p>
+						<span class="bold">Repeats (required):</span> How many times you want each name, word/sentence, alphabet or
+						set of numbers to be printed out for the particular child's worksheet.
+					</p>
+					<p>
+						<span class="bold">Word (Words form only):</span> The desired word or sentence to be printed out for the
+						child to trace. Required field (1-40 characters) for the names form.
+					</p>
+					<p>
+						<span class="bold">Select Case (Alphabet form only):</span> Specify whether you want the alphabet to be
+						printed in either upper or lower case for the child to trace. Required field for the alphabet form.
+					</p>
+					<p>
+						<span class="bold">Numbers (Numbers form only):</span> Specify whether you want to print out the numbers
+						1-10 or 1-20 for the child to trace. Required field for the numbers form.
+					</p>
+				</div>
+			</div>
+
+			<div class="form-area-container">
+				<div class="tabs">
+					<div class="tab names-tab" id="namesFormTab" data-theme-hex="#85b0ff">Names</div>
+					<div class="tab words-tab" id="wordsFormTab" data-theme-hex="#ff858b">Words</div>
+					<div class="tab alphabet-tab" id="alphabetFormTab" data-theme-hex="#8ef093">Alphabet</div>
+					<div class="tab numbers-tab" id="numbersFormTab" data-theme-hex="#ffbc85">Numbers</div>
+				</div>
+				<div class="form-area" id="formArea"></div>
+			</div>
+
+			<div class="print-area" id="printArea"></div>
+		</div>
+
+		<script src="./js/app.js" type="module"></script>
+	</body>
+</html>
