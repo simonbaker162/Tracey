@@ -44,7 +44,7 @@ export const basicFormMarkup = (type) => {
           <div class="alphabet-form__grid" id="alphabetFormGrid">
             <div class="alphabet-form__header-row" id="alphabetFormHeaderRow">
               <h3 class="alphabet-form__heading wide-column">Child Name</h3>
-              <h3 class="alphabet-form__heading medium-column">Select Case</h3>
+              <h3 class="alphabet-form__heading medium-column">Case</h3>
               <h3 class="alphabet-form__heading medium-column">Font Size</h3>
               <h3 class="alphabet-form__heading narrow-column">Repeats</h3>
               <span class="narrow-column"></h3>
