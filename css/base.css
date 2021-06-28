@@ -24,6 +24,35 @@ body {
 /* SCREEN STYLING */
 
 @media only screen {
+	.landscape-message-container {
+		height: 100vh;
+		width: 75vw;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.landscape-message-heading,
+	.landscape-message-img {
+		display: none;
+		margin: 5rem 0;
+	}
+
+	.landscape-message-heading {
+		font-size: 4rem;
+	}
+
+	.landscape-message-img {
+		width: 35vw;
+	}
+
+	.landscape-message-text {
+		display: none;
+		font-size: 1.8rem;
+		margin: 5rem 0;
+	}
+
 	.container {
 		background-color: #fefefe;
 		border-radius: 50px;
