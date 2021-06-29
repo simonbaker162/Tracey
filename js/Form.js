@@ -35,15 +35,27 @@ export class Form {
 
 	submitForm(event) {
 		event.preventDefault();
+		const isValidInput = this.validateForm();
+		if (!isValidInput) {
+			this.errorForm();
+		}
 		const printout = new Printout(this.type);
 		printout.generateMarkup();
-		// printout.clearImages();
 		setTimeout(() => {
 			printout.promptPrint();
 		}, 2000)
 		setTimeout(() => {
 			printout.clearPrintArea();
 		}, 8000);
+	}
+
+	validateForm() {
+		// check all required fields are filled out
+		return true;
+	}
+
+	errorForm() {
+		alert("Invalid form input");
 	}
 
 	addNewRow(id = 1) {

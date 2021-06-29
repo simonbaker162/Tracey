@@ -73,14 +73,6 @@ export class Printout {
 		}
 	}
 
-	// clearImages() {
-	// 	const images = document.querySelectorAll(".img");
-	// 	console.log(images);
-	// 	images.forEach((image) => {
-	// 		image.style.display = "none";
-	// 	});
-	// }
-
 	clearPrintArea() {
 		const printArea = document.getElementById("printArea");
 		printArea.innerHTML = "";

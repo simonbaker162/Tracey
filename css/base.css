@@ -941,7 +941,6 @@ AND PRINT PREVIEWS
 	}
 
 	.print-area {
-		/* background-color: red; */
 		display: block;
 		margin: 0;
 		padding: 0;
@@ -953,16 +952,14 @@ AND PRINT PREVIEWS
 		display: block;
 		font-family: "Delius", cursive;
 		font-size: 10mm;
-		/* margin-bottom: 0; */
 		text-align: center;
 	}
 
 	.para-print {
 		font-family: "Itim", cursive;
-		/* line-height: 100%; */
 		padding: 0;
+		line-height: 100%;
 		margin: 0 0 10mm 0;
-		/* letter-spacing: 2.5mm; */
 		text-decoration: underline dotted #333 1mm;
 		text-decoration-skip-ink: none;
 		word-wrap: break-word;

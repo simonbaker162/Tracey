@@ -94,7 +94,7 @@ export const namesFormRowMarkup = (id) => {
       </select>
     </div>
     <div class="names-form__column narrow-column">
-      <input type="number" class="repeats" id="namesRepeats${id}" />
+      <input type="number" min="1" max="20" value="1" step="1" class="repeats" id="namesRepeats${id}" />
     </div>
     <div class="names-form__column narrow-column">
       <button type="button" class="delete-row-btn" id="namesDelete${id}"><img src="./img/delete-icon.png" alt="Delete icon" class="icon"/>Delete</button>
@@ -121,7 +121,7 @@ export const wordsFormRowMarkup = (id) => {
       </select>
     </div>
     <div class="words-form__column narrow-column">
-      <input type="number" class="repeats" id="wordsRepeats${id}" />
+     <input type="number" min="1" max="20" value="1" step="1" class="repeats" id="wordsRepeats${id}" />
     </div>
     <div class="words-form__column narrow-column">
       <button type="button" class="delete-row-btn" id="wordsDelete${id}"><img src="./img/delete-icon.png" alt="Delete icon" class="icon"/>Delete</button>
@@ -151,7 +151,7 @@ export const alphabetFormRowMarkup = (id) => {
       </select>
     </div>
     <div class="alphabet-form__column narrow-column">
-      <input type="number" class="repeats" id="alphabetRepeats${id}" />
+      <input type="number" min="1" max="20" value="1" step="1" class="repeats" id="alphabetRepeats${id}" />
     </div>
     <div class="alphabet-form__column narrow-column">
       <button type="button" class="delete-row-btn" id="alphabetDelete${id}"><img src="./img/delete-icon.png" alt="Delete icon" class="icon"/>Delete</button>
@@ -181,7 +181,7 @@ export const numbersFormRowMarkup = (id) => {
      </select>
     </div>
     <div class="numbers-form__column narrow-column">
-      <input type="number" class="repeats" id="numbersRepeats${id}" />
+      <input type="number" min="1" max="20" value="1" step="1" class="repeats" id="numbersRepeats${id}" />
     </div>
     <div class="numbers-form__column narrow-column">
       <button type="button" class="delete-row-btn" id="numbersDelete${id}"><img src="./img/delete-icon.png" alt="Delete icon" class="icon"/>Delete</button>
