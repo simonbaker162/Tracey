@@ -40,10 +40,10 @@ export class Form {
 		// printout.clearImages();
 		setTimeout(() => {
 			printout.promptPrint();
-		}, 3000)
+		}, 2000)
 		setTimeout(() => {
 			printout.clearPrintArea();
-		}, 6000);
+		}, 8000);
 	}
 
 	addNewRow(id = 1) {

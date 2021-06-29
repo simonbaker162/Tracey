@@ -320,6 +320,156 @@ DIFFERENT SCREEN WIDTHS
 	}
 }
 
+@media only screen and (min-width: 568px) {
+	body {
+		font-size: 1.4rem;
+	}
+
+	.container {
+		width: 100%;
+		margin: 0;
+	}
+
+	.heading-area-container {
+		padding-top: 2.5rem;
+	}
+
+	.instructions-area-container {
+		padding: 2.5rem 1rem 0 1rem;
+		flex-direction: row;
+	}
+
+	.instructions-area-box {
+		width: 49%;
+		padding: 1rem;
+		margin: 0;
+	}
+
+	.children-img-container {
+		position: relative;
+		width: 20rem;
+		height: 10rem;
+	}
+
+	.children-img {
+		width: 20rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.options-img-container {
+		position: relative;
+		width: 100%;
+		margin-top: 10rem;
+	}
+
+	.options-img {
+		position: absolute;
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 10rem;
+		max-width: 22.5rem;
+	}
+
+	.heading {
+		font-size: 6rem;
+	}
+
+	.subheading {
+		font-size: 2rem;
+		padding: 1rem 0;
+	}
+
+	.form-area-container {
+		padding: 4rem 0;
+	}
+
+	.tabs {
+		width: 100%;
+		padding: 0 0.25rem;
+	}
+
+	.tab {
+		width: 20%;
+		font-size: 2rem;
+		padding: 1.5rem;
+	}
+
+	.form-area {
+		width: 100%;
+		padding: 0 0.25rem;
+	}
+
+	.form {
+		padding: 0 1rem;
+	}
+
+	.names-form__column,
+	.words-form__column,
+	.alphabet-form__column,
+	.numbers-form__column {
+		margin-bottom: 1.5rem;
+	}
+
+	.wide-column {
+		width: 14rem;
+		margin-right: 0.5rem;
+	}
+
+	.medium-column {
+		width: 10rem;
+		margin-right: 0.5rem;
+	}
+
+	.narrow-column {
+		width: 7.5rem;
+		margin-right: 0.5rem;
+	}
+
+	.names-form__heading,
+	.words-form__heading,
+	.alphabet-form__heading,
+	.numbers-form__heading {
+		font-size: 1.75rem;
+	}
+
+	.add-row-btn,
+	.submit-btn {
+		padding: 0.4rem 0.8rem;
+	}
+
+	.add-row-btn,
+	.submit-btn {
+		width: 12.5rem;
+		margin-right: 2.5rem;
+		margin-top: 0.5rem;
+		margin-bottom: 1.75rem;
+	}
+
+	.icon {
+		width: 20%;
+		margin-right: 0.5rem;
+	}
+
+	.delete-row-btn {
+		font-size: 1.25rem;
+		width: 8rem;
+		padding: 0.6rem 1.25rem;
+	}
+
+	.child-name,
+	.words,
+	.repeats,
+	.font-size,
+	.select-case,
+	.select-numbers {
+		font-size: 1.25rem;
+		padding: 0.6rem 0.75rem;
+	}
+}
+
 
 @media only screen and (min-width: 900px) {
 	body {
@@ -801,7 +951,7 @@ AND PRINT PREVIEWS
 
 	.personalise {
 		display: block;
-		font-family: "Itim", cursive;
+		font-family: "Delius", cursive;
 		font-size: 10mm;
 		/* margin-bottom: 0; */
 		text-align: center;
@@ -809,11 +959,12 @@ AND PRINT PREVIEWS
 
 	.para-print {
 		font-family: "Itim", cursive;
-		line-height: 100%;
+		/* line-height: 100%; */
 		padding: 0;
 		margin: 0 0 10mm 0;
 		/* letter-spacing: 2.5mm; */
 		text-decoration: underline dotted #333 1mm;
+		text-decoration-skip-ink: none;
 		word-wrap: break-word;
 		position: relative;
 		page-break-before: auto;
