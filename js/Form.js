@@ -5,8 +5,8 @@ import {
 	numbersFormRowMarkup,
 	wordsFormRowMarkup
 } from "./markup.js";
+
 import { Printout } from "./Printout.js";
-// import { changeTheme } from "./theme.js";
 
 // available arguments for Form constructor parameter:
 // "names", "words", "alphabet", "numbers"
@@ -38,21 +38,12 @@ export class Form {
 		const printout = new Printout(this.type);
 		printout.generateMarkup();
 		// printout.clearImages();
-		printout.promptPrint();
-		printout.clearPrintArea();
-		// changeTheme(this.type);
-	}
-
-	initAddNewRowListener() {
-		const addNewRowBtn = document.getElementById(`${this.type}FormNewRowBtn`);
-		addNewRowBtn.addEventListener("click", () => {
-			const rows = document.querySelectorAll(`.${this.type}-form__row`);
-			// regular expression to extract just the numbers from the ID of the last row
-			const lastRowId = parseInt(rows[rows.length - 1].id.replace(/\D/g, ""));
-			//
-			const nextRowId = lastRowId + 1;
-			this.addNewRow(nextRowId);
-		});
+		setTimeout(() => {
+			printout.promptPrint();
+		}, 3000)
+		setTimeout(() => {
+			printout.clearPrintArea();
+		}, 6000);
 	}
 
 	addNewRow(id = 1) {
@@ -73,11 +64,24 @@ export class Form {
 		this.grid.insertAdjacentHTML("beforeend", newRowMarkup);
 		if (id === 1) {
 			const deleteBtn = document.getElementById(`${this.type}Delete${id}`);
-			// hide delete button for first row so user can't delete all rows
-			deleteBtn.style.display = "none";
-			//
+			deleteBtn.style.display = "none"; // hide delete button for first row so user can't delete all rows
 		}
 		this.initDeleteRowEventListener(id);
+	}
+
+	deleteRow(id) {
+		const row = document.getElementById(`${this.type}FormRow${id}`);
+		row.remove();
+	}
+
+	initAddNewRowListener() {
+		const addNewRowBtn = document.getElementById(`${this.type}FormNewRowBtn`);
+		addNewRowBtn.addEventListener("click", () => {
+			const rows = document.querySelectorAll(`.${this.type}-form__row`);
+			const lastRowId = parseInt(rows[rows.length - 1].id.replace(/\D/g, "")); // regular expression to extract just the numbers from the ID of the last row
+			const nextRowId = lastRowId + 1;
+			this.addNewRow(nextRowId);
+		});
 	}
 
 	initDeleteRowEventListener(id) {
@@ -85,10 +89,5 @@ export class Form {
 		deleteBtn.addEventListener("click", () => {
 			this.deleteRow(id);
 		});
-	}
-
-	deleteRow(id) {
-		const row = document.getElementById(`${this.type}FormRow${id}`);
-		row.remove();
 	}
 }
