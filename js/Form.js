@@ -36,22 +36,55 @@ export class Form {
 	submitForm(event) {
 		event.preventDefault();
 		const isValidInput = this.validateForm();
-		if (!isValidInput) {
-			this.errorForm();
+		if (isValidInput === true) {
+			this.print();
 		}
+	}
+
+	print() {
 		const printout = new Printout(this.type);
 		printout.generateMarkup();
+
+		/////////////////////////////
+		// Due to fonts not loading,
+		// best solution is probably
+		// a timeout with a loading
+		// spinner so the user at least
+		// thinks the application isn't
+		// hanging
+		// OR USE THE FONT SOMEWHERE ELSE!!!
+		// PREVIEW IMAGE OF A RESOURCE??????
 		setTimeout(() => {
 			printout.promptPrint();
-		}, 2000)
-		setTimeout(() => {
+		}, 2000);
+
+		/////////////////////////
+		///////// CHANGE BELOW TO AN
+		///////// EVENT LISTENER
+		///////// IMPLEMENTATION
+		////////////////////////
+
+		// setTimeout(() => {
+		// 	printout.clearPrintArea();
+		// }, 8000);
+		window.onafterprint = (event) => {
 			printout.clearPrintArea();
-		}, 8000);
+		};
 	}
 
 	validateForm() {
-		// check all required fields are filled out
-		return true;
+		let validity = true;
+		const inputs = Array.from(document.getElementsByTagName("input"));
+		inputs.forEach((input) => {
+			if (!input.value) {
+				validity = false;
+			}
+		});
+		if (validity === false) {
+			const messageElement = document.getElementById("form-error-message");
+			this.flashMessage(messageElement, "Please fill in all fields first!");
+		}
+		return validity;
 	}
 
 	errorForm() {
@@ -74,25 +107,42 @@ export class Form {
 				newRowMarkup = numbersFormRowMarkup(id);
 		}
 		this.grid.insertAdjacentHTML("beforeend", newRowMarkup);
-		if (id === 1) {
-			const deleteBtn = document.getElementById(`${this.type}Delete${id}`);
-			deleteBtn.style.display = "none"; // hide delete button for first row so user can't delete all rows
-		}
+		// if (id === 1) {
+		// 	const deleteBtn = document.getElementById(`${this.type}Delete${id}`);
+		// 	deleteBtn.style.display = "none"; // hide delete button for first row so user can't delete all rows
+		// }
 		this.initDeleteRowEventListener(id);
 	}
 
 	deleteRow(id) {
-		const row = document.getElementById(`${this.type}FormRow${id}`);
-		row.remove();
+		const rows = document.getElementsByClassName(`${this.type}-form__row`);
+		if (rows.length > 1) {
+			const row = document.getElementById(`${this.type}FormRow${id}`);
+			row.parentElement.removeChild(row);
+		} else {
+			const messageElement = document.getElementById("delete-btn-column");
+			this.flashMessage(messageElement, "Cannot delete last row!");
+		}
+	}
+
+	flashMessage(element, message) {
+		element.innerHTML = message;
+		setTimeout(() => {
+			element.innerHTML = "";
+		}, 2000);
 	}
 
 	initAddNewRowListener() {
 		const addNewRowBtn = document.getElementById(`${this.type}FormNewRowBtn`);
 		addNewRowBtn.addEventListener("click", () => {
-			const rows = document.querySelectorAll(`.${this.type}-form__row`);
-			const lastRowId = parseInt(rows[rows.length - 1].id.replace(/\D/g, "")); // regular expression to extract just the numbers from the ID of the last row
-			const nextRowId = lastRowId + 1;
-			this.addNewRow(nextRowId);
+			const rows = Array.from(document.querySelectorAll(`.${this.type}-form__row`));
+			if (rows.length > 0) {
+				const lastRowId = parseInt(rows[rows.length - 1].id.replace(/\D/g, "")); // regular expression to extract just the numbers from the ID of the last row
+				const nextRowId = lastRowId + 1;
+				this.addNewRow(nextRowId);
+			} else if (rows.length === 0) {
+				this.addNewRow(1);
+			}
 		});
 	}
 

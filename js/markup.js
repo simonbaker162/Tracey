@@ -9,12 +9,13 @@ export const basicFormMarkup = (type) => {
               <h3 class="names-form__heading wide-column">Child Name</h3>
               <h3 class="names-form__heading medium-column">Font Size</h3>
               <h3 class="names-form__heading narrow-column">Repeats</h3>
-              <span class="narrow-column"></h3>
+              <span class="narrow-column error-message" id="delete-btn-column"></h3>
             </div>
           </div>
           <div class="button-row">
             <button type="button" class="add-row-btn" id="namesFormNewRowBtn"><img src="./img/plus-icon.png" alt="Add new row icon" class="icon"/>Add new row</button>
             <button type="submit" class="submit-btn"><img src="./img/tick-icon.png" alt="Submit form icon" class="icon" />Create printout</button>
+            <span class="error-message" id="form-error-message"></span>
           </div>
         </form>
       `;
@@ -28,12 +29,13 @@ export const basicFormMarkup = (type) => {
             <h3 class="words-form__heading wide-column">Words</h3>
             <h3 class="words-form__heading medium-column">Font Size</h3>
             <h3 class="words-form__heading narrow-column">Repeats</h3>
-            <span class="narrow-column"></h3>
+            <span class="narrow-column error-message" id="delete-btn-column"></h3>
           </div>
         </div>
         <div class="button-row">
           <button type="button" class="add-row-btn" id="wordsFormNewRowBtn"><img src="./img/plus-icon.png" alt="Add new row icon" class="icon"/>Add new row</button>
           <button type="submit" class="submit-btn"><img src="./img/tick-icon.png" alt="Submit form icon" class="icon" />Create printout</button>
+          <span class="error-message" id="form-error-message"></span>
         </div>
       </form>
       `;
@@ -47,12 +49,13 @@ export const basicFormMarkup = (type) => {
               <h3 class="alphabet-form__heading medium-column">Case</h3>
               <h3 class="alphabet-form__heading medium-column">Font Size</h3>
               <h3 class="alphabet-form__heading narrow-column">Repeats</h3>
-              <span class="narrow-column"></h3>
+              <span class="narrow-column error-message" id="delete-btn-column"></h3>
             </div>
           </div>
           <div class="button-row">
             <button type="button" class="add-row-btn" id="alphabetFormNewRowBtn"><img src="./img/plus-icon.png" alt="Add new row icon" class="icon"/>Add new row</button>
             <button type="submit" class="submit-btn"><img src="./img/tick-icon.png" alt="Submit form icon" class="icon" />Create printout</button>
+            <span class="error-message" id="form-error-message"></span>
           </div>
         </form>
       `;
@@ -66,12 +69,13 @@ export const basicFormMarkup = (type) => {
               <h3 class="numbers-form__heading narrow-column">Numbers</h3>
               <h3 class="numbers-form__heading medium-column">Font Size</h3>
               <h3 class="numbers-form__heading narrow-column">Repeats</h3>
-              <span class="narrow-column"></h3>
+              <span class="narrow-column error-message" id="delete-btn-column"></h3>
             </div>
           </div>
           <div class="button-row">
             <button type="button" class="add-row-btn" id="numbersFormNewRowBtn"><img src="./img/plus-icon.png" alt="Add new row icon" class="icon"/>Add new row</button>
             <button type="submit" class="submit-btn"><img src="./img/tick-icon.png" alt="Submit form icon" class="icon" />Create printout</button>
+            <span class="error-message" id="form-error-message"></span>
           </div>
         </form>
       `;
