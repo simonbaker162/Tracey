@@ -28,6 +28,14 @@ const init = () => {
 	initTabEventListeners();
 };
 
+// Reset scroll position to top when changing
+// mobile orientation to landscape
+const handleWindowResize = (event) => {
+	window.scroll(0, 0);
+};
+
+window.addEventListener("resize", handleWindowResize);
+
 init();
 
 // FEATURE submit changes to update if new row was added

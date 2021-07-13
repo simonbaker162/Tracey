@@ -20,6 +20,35 @@ body {
 	align-items: center;
 }
 
+.loader {
+	display: none;
+	width: 10vh;
+	height: 10vh;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1vh solid lightblue;
+	border-top: 1vh solid blue;
+	border-radius: 50%;
+	animation: loading 2s linear infinite;
+	z-index: 100;
+}
+
+.loading-background {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(50, 50, 50, 0.5);
+	z-index: 50;
+}
+
+.loader.active,
+.loading-background.active {
+	display: block;
+}
+
 /* 
 /////////////////////////////////////////////////////
 SCREEN STYLING
@@ -978,5 +1007,20 @@ AND PRINT PREVIEWS
 
 	.para-print.small {
 		font-size: 20mm;
+	}
+}
+
+/* 
+/////////////////////////////////////////////////////
+ANIMATIONS
+/////////////////////////////////////////////////////
+*/
+
+@keyframes loading {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }

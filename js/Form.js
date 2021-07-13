@@ -43,6 +43,10 @@ export class Form {
 
 	print() {
 		const printout = new Printout(this.type);
+		const loadingBackground = document.getElementById("loading-background");
+		const loader = document.getElementById("loader");
+		loadingBackground.classList.add("active");
+		loader.classList.add("active");
 		printout.generateMarkup();
 
 		/////////////////////////////
@@ -55,8 +59,9 @@ export class Form {
 		// OR USE THE FONT SOMEWHERE ELSE!!!
 		// PREVIEW IMAGE OF A RESOURCE??????
 		setTimeout(() => {
+			loader.classList.remove("active");
 			printout.promptPrint();
-		}, 2000);
+		}, 2500);
 
 		/////////////////////////
 		///////// CHANGE BELOW TO AN
@@ -68,6 +73,7 @@ export class Form {
 		// 	printout.clearPrintArea();
 		// }, 8000);
 		window.onafterprint = (event) => {
+			loadingBackground.classList.remove("active");
 			printout.clearPrintArea();
 		};
 	}
