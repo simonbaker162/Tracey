@@ -49,6 +49,10 @@ body {
 	display: block;
 }
 
+.para-print.last-repeat {
+	page-break-after: always;
+}
+
 /* 
 /////////////////////////////////////////////////////
 SCREEN STYLING
