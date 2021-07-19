@@ -8,6 +8,13 @@ BASIC SETUP
 	box-sizing: border-box;
 }
 
+:root {
+	--theme-color-names: #85b0ff;
+	--theme-color-words: #ff858b;
+	--theme-color-alphabet: #8ef093;
+	--theme-color-numbers: #ffbc85;
+}
+
 html {
 	font-size: 62.5%;
 }
@@ -20,6 +27,8 @@ body {
 	align-items: center;
 }
 
+/* LOADER */
+
 .loader {
 	display: none;
 	width: 10vh;
@@ -28,8 +37,8 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 1vh solid lightblue;
-	border-top: 1vh solid blue;
+	border: 1vh solid #85b0ff;
+	border-top: 1vh solid #3e82ff;
 	border-radius: 50%;
 	animation: loading 2s linear infinite;
 	z-index: 100;
@@ -40,17 +49,13 @@ body {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(50, 50, 50, 0.5);
+	background-color: rgba(30, 30, 30, 0.7);
 	z-index: 50;
 }
 
 .loader.active,
 .loading-background.active {
 	display: block;
-}
-
-.para-print.last-repeat {
-	page-break-after: always;
 }
 
 /* 
@@ -62,35 +67,6 @@ SCREEN STYLING
 @media only screen {
 	body {
 		background-color: #fafafa;
-	}
-
-	.landscape-message-container {
-		height: 100vh;
-		width: 75vw;
-		display: none;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.landscape-message-heading,
-	.landscape-message-img {
-		display: none;
-		margin: 5rem 0;
-	}
-
-	.landscape-message-heading {
-		font-size: 4rem;
-	}
-
-	.landscape-message-img {
-		width: 35vw;
-	}
-
-	.landscape-message-text {
-		display: none;
-		font-size: 1.8rem;
-		margin: 5rem 0;
 	}
 
 	.container {
@@ -143,6 +119,8 @@ SCREEN STYLING
 		transition: all 1s;
 	}
 
+	/* HEADING & SUBHEADING STYLING */
+
 	.heading,
 	.subheading {
 		font-family: "Pangolin", cursive;
@@ -152,15 +130,19 @@ SCREEN STYLING
 	}
 
 	.heading {
-		color: #85b0ff;
+		color: var(--theme-color-names);
 		transition: all 1s;
 		opacity: 0;
 	}
+
+	/* HEADING & SUBHEADING STYLING FOR ACTIVE THEME */
 
 	.heading.active,
 	.img.active {
 		opacity: 1;
 	}
+
+	/* TAB STYLING */
 
 	.tabs {
 		display: flex;
@@ -180,24 +162,41 @@ SCREEN STYLING
 	}
 
 	.names-tab {
-		background-color: #85b0ff;
 		border-radius: 10px 2px 0 0;
 	}
 
-	.words-tab {
-		background-color: #ff858b;
-		border-radius: 2px 2px 0 0;
-	}
-
+	.words-tab,
 	.alphabet-tab {
-		background-color: #8ef093;
 		border-radius: 2px 2px 0 0;
 	}
 
 	.numbers-tab {
-		background-color: #ffbc85;
 		border-radius: 2px 10px 0 0;
 	}
+
+	/* TAB & FORM THEME */
+
+	.names-tab,
+	.names-form {
+		background-color: #85b0ff;
+	}
+
+	.words-tab,
+	.words-form {
+		background-color: #ff858b;
+	}
+
+	.alphabet-tab,
+	.alphabet-form {
+		background-color: #8ef093;
+	}
+
+	.numbers-tab,
+	.numbers-form {
+		background-color: #ffbc85;
+	}
+
+	/* FORM BASE STYLING */
 
 	.form-area {
 		position: relative;
@@ -210,22 +209,6 @@ SCREEN STYLING
 		border-radius: 0 10px 10px 10px;
 	}
 
-	.names-form {
-		background-color: #85b0ff;
-	}
-
-	.words-form {
-		background-color: #ff858b;
-	}
-
-	.alphabet-form {
-		background-color: #8ef093;
-	}
-
-	.numbers-form {
-		background-color: #ffbc85;
-	}
-
 	.button-row {
 		display: flex;
 	}
@@ -233,6 +216,8 @@ SCREEN STYLING
 	.print-area {
 		width: 100%;
 	}
+
+	/* FORM ROW/COLUMN STRUCTURE */
 
 	.names-form__row,
 	.words-form__row,
@@ -265,6 +250,8 @@ SCREEN STYLING
 		color: #333;
 	}
 
+	/* FORM BUTTON STYLING */
+
 	.add-row-btn,
 	.delete-row-btn,
 	.submit-btn {
@@ -284,6 +271,8 @@ SCREEN STYLING
 		transform: scale(1.05);
 		transition: all 0.1s;
 	}
+
+	/* FORM INPUT STYLING */
 
 	.child-name,
 	.words,
@@ -312,6 +301,8 @@ SCREEN STYLING
 		cursor: pointer;
 	}
 
+	/* FORM ERROR MESSAGE STYLING */
+
 	#delete-btn-column,
 	#form-error-message {
 		color: red;
@@ -327,6 +318,8 @@ MEDIA QUERIES FOR RESPONSIVENESS TO
 DIFFERENT SCREEN WIDTHS
 /////////////////////////////////////////////////////
 */
+
+/* STYLING FOR MESSAGE WHICH APPEARS ONLY ON INCOMPATIBLE (VIEWPORT WIDTH < 568PX) DEVICES  */
 
 @media only screen and (max-width: 567px) {
 	img,
@@ -345,24 +338,45 @@ DIFFERENT SCREEN WIDTHS
 		display: none;
 	}
 	.landscape-message-container {
+		height: 100vh;
+		width: 75vw;
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 	.landscape-message-heading,
 	.landscape-message-img,
 	.landscape-message-text {
 		display: block;
 	}
-
+	.landscape-message-heading,
+	.landscape-message-img {
+		margin: 5rem 0;
+	}
+	.landscape-message-img {
+		width: 35vw;
+	}
 	.landscape-message-heading {
 		font-family: "Pangolin", cursive;
 		margin: 0;
 		color: #85b0ff;
+		font-size: 4rem;
+	}
+	.landscape-message-text {
+		font-size: 1.8rem;
+		margin: 5rem 0;
 	}
 }
 
 @media only screen and (min-width: 568px) {
 	body {
 		font-size: 1.4rem;
+	}
+
+	.landscape-message-container,
+	.landscape-message-container > * {
+		display: none;
 	}
 
 	.container {
@@ -1016,6 +1030,10 @@ AND PRINT PREVIEWS
 
 	.para-print.small {
 		font-size: 20mm;
+	}
+
+	.para-print.last-repeat {
+		page-break-after: always;
 	}
 }
 

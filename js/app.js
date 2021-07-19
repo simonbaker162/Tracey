@@ -1,13 +1,13 @@
 import { Form } from "./Form.js";
 import { Theme } from "./Theme.js";
 
+const createForm = (type) => {
+	new Form(type);
+};
+
 const clearFormArea = () => {
 	const formArea = document.getElementById("formArea");
 	formArea.innerHTML = "";
-};
-
-const createForm = (type) => {
-	new Form(type);
 };
 
 const initTabEventListeners = () => {
@@ -23,23 +23,27 @@ const initTabEventListeners = () => {
 	});
 };
 
-const init = () => {
+const initWindowEventListener = () => {
+	let windowWidth = window.innerWidth;
+	window.addEventListener("resize", (event) => {
+		const newWidth = event.target.innerWidth;
+		if (windowWidth < 568 && newWidth >= 568) {
+			window.scroll(0, 0);
+		}
+		windowWidth = newWidth;
+	});
+};
+
+const initApp = () => {
 	createForm("names");
 	const theme = new Theme("names");
 	theme.displayHeading();
 	theme.changeTheme();
 	initTabEventListeners();
+	initWindowEventListener();
 };
 
-// Reset scroll position to top when changing
-// mobile orientation to landscape
-const handleWindowResize = (event) => {
-	window.scroll(0, 0);
-};
-
-window.addEventListener("resize", handleWindowResize);
-
-init();
+initApp();
 
 // FEATURE submit changes to update if new row was added
 
