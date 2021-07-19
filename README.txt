@@ -5,6 +5,8 @@ If you want to change a theme's colour (or if new tabs are being added and there
 
 <div class="tab names-tab" id="namesFormTab" data-theme-hex="#85b0ff">Names</div>
 
+The changeTheme() function in theme.js uses the data-theme-hex attribute of the tab to change the 
+
 
 2) STYLING: In base.css, change the background colour property for the relevant tab and form classes (e.g. ".names-tab" and ".names-form").
 

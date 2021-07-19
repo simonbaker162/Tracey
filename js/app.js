@@ -1,5 +1,5 @@
 import { Form } from "./Form.js";
-import { changeTheme } from "./theme.js";
+import { Theme } from "./Theme.js";
 
 const clearFormArea = () => {
 	const formArea = document.getElementById("formArea");
@@ -16,15 +16,18 @@ const initTabEventListeners = () => {
 		const type = tab.textContent.toLowerCase();
 		tab.addEventListener("click", () => {
 			clearFormArea();
-			changeTheme(type);
 			createForm(type);
+			const theme = new Theme(type);
+			theme.changeTheme();
 		});
 	});
 };
 
 const init = () => {
-	changeTheme("names");
 	createForm("names");
+	const theme = new Theme("names");
+	theme.displayHeading();
+	theme.changeTheme();
 	initTabEventListeners();
 };
 
