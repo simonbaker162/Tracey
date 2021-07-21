@@ -1,0 +1,968 @@
+/* 
+/////////////////////////////////////////////////////
+MEDIA QUERIES FOR RESPONSIVENESS TO 
+DIFFERENT SCREEN WIDTHS
+/////////////////////////////////////////////////////
+*/
+
+/* STYLING FOR MESSAGE WHICH APPEARS ONLY ON INCOMPATIBLE (VIEWPORT WIDTH < 568PX) DEVICES  */
+
+@media only screen and (max-width: 567px) {
+	img,
+	h1,
+	h2,
+	h3,
+	form,
+	p:not(.landscape-message-text),
+	.container,
+	.instructions-area-container,
+	.heading-area-container,
+	.instructions-area-box,
+	.form-area-container,
+	.print-area,
+	.tab {
+		display: none;
+	}
+	.landscape-message-container {
+		height: 100vh;
+		width: 75vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.landscape-message-heading,
+	.landscape-message-img,
+	.landscape-message-text {
+		display: block;
+	}
+	.landscape-message-heading,
+	.landscape-message-img {
+		margin: 5rem 0;
+	}
+	.landscape-message-img {
+		width: 35vw;
+	}
+	.landscape-message-heading {
+		font-family: "Pangolin", cursive;
+		margin: 0;
+		color: #85b0ff;
+		font-size: 4rem;
+	}
+	.landscape-message-text {
+		font-size: 1.8rem;
+		margin: 5rem 0;
+	}
+}
+
+@media only screen and (min-width: 568px) {
+	body {
+		font-size: 1.4rem;
+	}
+
+	.landscape-message-container,
+	.landscape-message-container > * {
+		display: none;
+	}
+
+	.container {
+		width: 100%;
+		margin: 0;
+	}
+
+	.heading-area-container {
+		padding-top: 5rem;
+	}
+
+	.instructions-area-container {
+		padding: 0;
+	}
+
+	.instructions-area-box {
+		padding: 2.5rem;
+		margin: 0;
+	}
+
+	.children-img-container {
+		position: relative;
+		width: 15rem;
+		height: 7.5rem;
+	}
+
+	.children-img {
+		width: 15rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.options-img-container {
+		position: relative;
+		width: 100%;
+		margin: 1.5rem 0 5rem;
+	}
+
+	.options-img {
+		position: absolute;
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 10rem;
+		max-width: 15rem;
+	}
+
+	.heading {
+		font-size: 6rem;
+	}
+
+	.subheading {
+		font-size: 2rem;
+		padding: 1rem 0;
+	}
+
+	.form-area-container {
+		padding: 0;
+	}
+
+	.tabs {
+		width: 100%;
+		padding: 0;
+	}
+
+	.tab {
+		width: 20%;
+		font-size: 2rem;
+		padding: 1.5rem;
+	}
+
+	.form-area {
+		width: 100%;
+		padding: 0;
+	}
+
+	.form {
+		padding: 1rem;
+		margin-bottom: 5rem;
+	}
+
+	.names-form__column,
+	.words-form__column,
+	.alphabet-form__column,
+	.numbers-form__column {
+		margin-bottom: 1.5rem;
+	}
+
+	.wide-column {
+		width: 12.5rem;
+		margin-right: 0.75rem;
+	}
+
+	.medium-column {
+		width: 10rem;
+		margin-right: 0.75rem;
+	}
+
+	.narrow-column {
+		width: 7.5rem;
+		margin-right: 0.75rem;
+	}
+
+	.names-form__heading,
+	.words-form__heading,
+	.alphabet-form__heading,
+	.numbers-form__heading {
+		font-size: 1.75rem;
+	}
+
+	.add-row-btn,
+	.submit-btn {
+		font-size: 1.4rem;
+		width: 12.5rem;
+		padding: 0.4rem 0.8rem;
+		margin-right: 0.75rem;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.icon {
+		width: 20%;
+		margin-right: 0.5rem;
+	}
+
+	.delete-row-btn {
+		font-size: 1.4rem;
+		width: 7.5rem;
+		padding: 0.5rem 1rem;
+	}
+
+	.child-name,
+	.words,
+	.repeats,
+	.font-size,
+	.select-case,
+	.select-numbers {
+		font-size: 1.25rem;
+		padding: 0.5rem 1rem;
+	}
+}
+
+@media only screen and (min-width: 667px) {
+	body {
+		font-size: 1.5rem;
+	}
+
+	.heading-area-container {
+		padding-top: 7.5rem;
+	}
+
+	.children-img-container {
+		width: 17.5rem;
+		height: 8.75rem;
+	}
+
+	.children-img {
+		width: 17.5rem;
+	}
+
+	.instructions-area-box {
+		padding: 5rem;
+	}
+
+	.options-img-container {
+		margin: 1.5rem 0 7.5rem;
+	}
+
+	.options-img {
+		max-width: 17.5rem;
+	}
+
+	.heading {
+		font-size: 7rem;
+	}
+
+	.subheading {
+		font-size: 2.25rem;
+		padding: 2.5rem 0;
+	}
+
+	.tabs {
+		width: 95%;
+	}
+
+	.tab {
+		font-size: 2.25rem;
+	}
+
+	.form-area {
+		width: 95%;
+	}
+
+	.form {
+		padding: 2rem;
+	}
+
+	.names-form__column,
+	.words-form__column,
+	.alphabet-form__column,
+	.numbers-form__column {
+		margin-bottom: 2rem;
+	}
+
+	.wide-column {
+		width: 14rem;
+	}
+
+	.medium-column {
+		width: 11rem;
+	}
+
+	.narrow-column {
+		width: 8rem;
+	}
+
+	.names-form__heading,
+	.words-form__heading,
+	.alphabet-form__heading,
+	.numbers-form__heading {
+		font-size: 2rem;
+	}
+
+	.add-row-btn,
+	.submit-btn {
+		font-size: 1.5rem;
+		width: 14rem;
+		padding: 0.5rem 1rem;
+		margin-right: 0.75rem;
+		margin-top: 1.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.delete-row-btn {
+		font-size: 1.5rem;
+		width: 8rem;
+		padding: 0.6rem 1.2rem;
+	}
+
+	.child-name,
+	.words,
+	.repeats,
+	.font-size,
+	.select-case,
+	.select-numbers {
+		font-size: 1.5rem;
+		padding: 0.6rem 1.2rem;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	body {
+		font-size: 1.6rem;
+	}
+
+	.instructions-area-box {
+		padding: 10rem 7.5rem;
+	}
+
+	.children-img-container {
+		width: 25rem;
+		height: 12.5rem;
+	}
+
+	.children-img {
+		width: 25rem;
+	}
+
+	.options-img-container {
+		margin: 1.5rem 0 10rem;
+	}
+
+	.options-img {
+		max-width: 22.5rem;
+	}
+
+	.heading {
+		font-size: 8rem;
+	}
+
+	.subheading {
+		font-size: 2.5rem;
+		padding: 3rem 0;
+	}
+
+	.tabs {
+		width: 90%;
+	}
+
+	.tab {
+		font-size: 2.5rem;
+		padding: 2rem;
+	}
+
+	.form-area {
+		width: 90%;
+	}
+
+	.names-form__column,
+	.words-form__column,
+	.alphabet-form__column,
+	.numbers-form__column {
+		margin-bottom: 2.5rem;
+	}
+
+	.wide-column {
+		width: 18rem;
+		margin-right: 1.25rem;
+	}
+
+	.medium-column {
+		width: 14rem;
+		margin-right: 1.25rem;
+	}
+
+	.narrow-column {
+		width: 10rem;
+		margin-right: 1.25rem;
+	}
+
+	.names-form__heading,
+	.words-form__heading,
+	.alphabet-form__heading,
+	.numbers-form__heading {
+		font-size: 2.25rem;
+	}
+
+	.add-row-btn,
+	.submit-btn {
+		font-size: 1.6rem;
+		width: 18rem;
+		padding: 0.75rem 1.5rem;
+		margin-right: 1.25rem;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.delete-row-btn {
+		font-size: 1.6rem;
+		width: 10rem;
+		padding: 0.75rem 1.5rem;
+	}
+
+	.child-name,
+	.words,
+	.repeats,
+	.font-size,
+	.select-case,
+	.select-numbers {
+		font-size: 1.6rem;
+		padding: 0.75rem 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	body {
+		font-size: 1.7rem;
+	}
+
+	.container {
+		margin: 7.5rem;
+		width: auto;
+	}
+
+	.heading-area-container {
+		padding-top: 12.5rem;
+	}
+
+	.instructions-area-container {
+		flex-direction: row;
+		align-items: flex-start;
+		padding: 5rem 5rem 0 5rem;
+	}
+
+	.instructions-area-box {
+		padding: 5rem;
+	}
+
+	.instructions-para.hide {
+		display: block;
+	}
+
+	.children-img-container {
+		width: 30rem;
+		height: 18rem;
+	}
+
+	.children-img {
+		width: 30rem;
+	}
+
+	.options-img-container {
+		margin: 5rem 0 15rem;
+	}
+
+	.options-img {
+		max-width: 25rem;
+	}
+
+	.instructions-btn {
+		display: none;
+	}
+
+	.heading {
+		font-size: 10rem;
+	}
+
+	.subheading {
+		font-size: 2.75rem;
+		padding: 3.5rem 0;
+	}
+
+	.form-area-container {
+		padding: 5rem 0;
+	}
+
+	.tabs {
+		width: 95%;
+	}
+
+	.tab {
+		font-size: 2.75rem;
+		padding: 2.25rem;
+	}
+
+	.form-area {
+		width: 95%;
+	}
+
+	.form {
+		padding: 2.5rem 5rem;
+	}
+
+	.names-form__column,
+	.words-form__column,
+	.alphabet-form__column,
+	.numbers-form__column {
+		margin-bottom: 3rem;
+	}
+
+	.wide-column {
+		width: 21rem;
+		margin-right: 1.75rem;
+	}
+
+	.medium-column {
+		width: 16rem;
+		margin-right: 1.75rem;
+	}
+
+	.narrow-column {
+		width: 11rem;
+		margin-right: 1.75rem;
+	}
+
+	.names-form__heading,
+	.words-form__heading,
+	.alphabet-form__heading,
+	.numbers-form__heading {
+		font-size: 2.5rem;
+	}
+
+	.add-row-btn,
+	.submit-btn {
+		font-size: 1.7rem;
+		width: 21rem;
+		padding: 0.5rem 1rem;
+		margin-right: 1.75rem;
+		margin-top: 3rem;
+		margin-bottom: 6rem;
+	}
+
+	.delete-row-btn {
+		font-size: 1.7rem;
+		width: 11rem;
+		padding: 1rem 1.5rem;
+	}
+
+	.child-name,
+	.words,
+	.repeats,
+	.font-size,
+	.select-case,
+	.select-numbers {
+		font-size: 1.7rem;
+		padding: 1rem 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	body {
+		font-size: 1.8rem;
+	}
+
+	.container {
+		margin: 15rem;
+	}
+
+	.heading-area-container {
+		padding-top: 20rem;
+	}
+
+	.instructions-area-container {
+		padding: 10rem 10rem 0 10rem;
+	}
+
+	.instructions-area-box {
+		padding: 10rem;
+	}
+
+	.children-img-container {
+		width: 36rem;
+		height: 24rem;
+	}
+
+	.children-img {
+		width: 36rem;
+	}
+
+	.options-img-container {
+		margin: 7.5rem 0 20rem;
+	}
+
+	.options-img {
+		max-width: 30rem;
+	}
+
+	.heading {
+		font-size: 12.5rem;
+	}
+
+	.subheading {
+		font-size: 3.5rem;
+		padding: 5rem 0;
+	}
+
+	.form-area-container {
+		padding: 5rem 0;
+	}
+
+	.tabs {
+		width: 85%;
+	}
+
+	.tab {
+		font-size: 3rem;
+		padding: 2.5rem;
+	}
+
+	.form-area {
+		width: 85%;
+	}
+
+	.form {
+		padding: 3.5rem 7.5rem;
+	}
+
+	.names-form__column,
+	.words-form__column,
+	.alphabet-form__column,
+	.numbers-form__column {
+		margin-bottom: 3.5rem;
+	}
+
+	.wide-column {
+		width: 27.5rem;
+		margin-right: 2.5rem;
+	}
+
+	.medium-column {
+		width: 20rem;
+		margin-right: 2.5rem;
+	}
+
+	.narrow-column {
+		width: 12.5rem;
+		margin-right: 2.5rem;
+	}
+
+	.names-form__heading,
+	.words-form__heading,
+	.alphabet-form__heading,
+	.numbers-form__heading {
+		font-size: 2.75rem;
+	}
+
+	.add-row-btn,
+	.submit-btn,
+	.instructions-btn {
+		font-size: 1.8rem;
+		width: 27.5rem;
+		padding: 0.6rem 1.2rem;
+		margin-right: 2.5rem;
+		margin-top: 3.5rem;
+		margin-bottom: 7rem;
+	}
+
+	.delete-row-btn {
+		font-size: 1.8rem;
+		width: 12.5rem;
+		padding: 1.5rem 2.25rem;
+	}
+
+	.child-name,
+	.words,
+	.repeats,
+	.font-size,
+	.select-case,
+	.select-numbers {
+		font-size: 1.8rem;
+		padding: 1.5rem 2.25rem;
+	}
+}
+
+@media only screen and (min-width: 2560px) {
+	body {
+		font-size: 2rem;
+	}
+
+	.container {
+		margin: 20rem;
+	}
+
+	.heading-area-container {
+		padding-top: 22.5rem;
+	}
+
+	.instructions-area-container {
+		padding: 12.5rem 12.5rem 0 12.5rem;
+	}
+
+	.instructions-area-box {
+		padding: 12.5rem;
+	}
+
+	.children-img-container {
+		width: 45rem;
+		height: 30rem;
+	}
+
+	.children-img {
+		width: 45rem;
+	}
+
+	.heading {
+		font-size: 15rem;
+	}
+
+	.subheading {
+		font-size: 4rem;
+		padding: 6rem 0;
+	}
+
+	.tabs {
+		width: 80%;
+	}
+
+	.tab {
+		font-size: 3.5rem;
+		padding: 4rem;
+	}
+
+	.form-area {
+		width: 80%;
+	}
+
+	.form {
+		padding: 5rem 10rem;
+	}
+
+	.names-form__column,
+	.words-form__column,
+	.alphabet-form__column,
+	.numbers-form__column {
+		margin-bottom: 4rem;
+	}
+
+	.wide-column {
+		width: 35rem;
+		margin-right: 3.5rem;
+	}
+
+	.medium-column {
+		width: 25rem;
+		margin-right: 3.5rem;
+	}
+
+	.narrow-column {
+		width: 17.5rem;
+		margin-right: 3.5rem;
+	}
+
+	.names-form__heading,
+	.words-form__heading,
+	.alphabet-form__heading,
+	.numbers-form__heading {
+		font-size: 3rem;
+	}
+
+	.add-row-btn,
+	.submit-btn,
+	.instructions-btn {
+		font-size: 2rem;
+		width: 35rem;
+		padding: 0.8rem 1.6rem;
+		margin-right: 3.5rem;
+		margin-top: 4rem;
+		margin-bottom: 8rem;
+	}
+
+	.delete-row-btn {
+		font-size: 2rem;
+		width: 17.5rem;
+		padding: 2rem 3rem;
+	}
+
+	.child-name,
+	.words,
+	.repeats,
+	.font-size,
+	.select-case,
+	.select-numbers {
+		font-size: 2rem;
+		padding: 2rem 3rem;
+	}
+}
+
+@media only screen and (min-width: 3840px) {
+	body {
+		font-size: 2.5rem;
+	}
+
+	.container {
+		margin: 40rem;
+	}
+
+	.heading-area-container {
+		padding-top: 25rem;
+	}
+
+	.instructions-area-container {
+		padding: 15rem 15rem 0 15rem;
+	}
+
+	.instructions-area-box {
+		padding: 15rem;
+	}
+
+	.children-img-container {
+		width: 60rem;
+		height: 40rem;
+	}
+
+	.children-img {
+		width: 60rem;
+	}
+
+	.heading {
+		font-size: 22.5rem;
+	}
+
+	.subheading {
+		font-size: 6rem;
+		padding: 8rem 0;
+	}
+
+	.tab {
+		font-size: 4rem;
+		padding: 5rem;
+	}
+
+	.form {
+		padding: 7.5rem 12.5rem;
+	}
+
+	.names-form__column,
+	.words-form__column,
+	.alphabet-form__column,
+	.numbers-form__column {
+		margin-bottom: 4.5rem;
+	}
+
+	.wide-column {
+		width: 45rem;
+		margin-right: 5rem;
+	}
+
+	.medium-column {
+		width: 35rem;
+		margin-right: 5rem;
+	}
+
+	.narrow-column {
+		width: 25rem;
+		margin-right: 5rem;
+	}
+
+	.names-form__heading,
+	.words-form__heading,
+	.alphabet-form__heading,
+	.numbers-form__heading {
+		font-size: 4rem;
+	}
+
+	.add-row-btn,
+	.submit-btn,
+	.instructions-btn {
+		font-size: 2.5rem;
+		width: 45rem;
+		padding: 1rem 2rem;
+		margin-right: 5rem;
+		margin-top: 4.5rem;
+		margin-bottom: 9rem;
+	}
+
+	.delete-row-btn {
+		font-size: 2.5rem;
+		width: 25rem;
+		padding: 3rem 4.5rem;
+	}
+
+	.child-name,
+	.words,
+	.repeats,
+	.font-size,
+	.select-case,
+	.select-numbers {
+		font-size: 2.5rem;
+		padding: 3rem 4.5rem;
+	}
+}
+
+/* 
+/////////////////////////////////////////////////////
+PRINT STYLING
+FOR PRINTABLE RESOURCES GENERATED BY THE APP
+AND PRINT PREVIEWS
+/////////////////////////////////////////////////////
+*/
+
+@media only print {
+	body {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	img,
+	h1,
+	h2:not(.personalise),
+	h3,
+	form,
+	p:not(.para-print),
+	.tab {
+		display: none;
+	}
+
+	.print-area {
+		display: block;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		overflow: visible;
+	}
+
+	.personalise {
+		display: block;
+		font-family: "Delius", cursive;
+		font-size: 10mm;
+		text-align: center;
+	}
+
+	.para-print {
+		font-family: "Itim", cursive;
+		padding: 0;
+		line-height: 100%;
+		margin: 0 0 10mm 0;
+		text-decoration: underline dotted #333 1mm;
+		text-decoration-skip-ink: none;
+		word-wrap: break-word;
+		position: relative;
+		page-break-before: auto;
+		page-break-after: auto;
+		page-break-inside: avoid;
+	}
+
+	.para-print.large {
+		font-size: 40mm;
+	}
+
+	.para-print.medium {
+		font-size: 30mm;
+	}
+
+	.para-print.small {
+		font-size: 20mm;
+	}
+
+	.para-print.last-repeat {
+		page-break-after: always;
+	}
+}

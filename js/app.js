@@ -10,6 +10,22 @@ const clearFormArea = () => {
 	formArea.innerHTML = "";
 };
 
+const toggleInstructions = () => {
+	const instructionsParas = document.querySelectorAll(".instructions-para");
+	instructionsParas.forEach((element) => {
+		element.classList.toggle("hide");
+	});
+};
+
+const toggleInstructionsBtnText = () => {
+	const instructionsBtn = document.getElementById("instructions-btn");
+	if (instructionsBtn.innerHTML === "Show") {
+		instructionsBtn.innerHTML = "Hide";
+	} else if (instructionsBtn.innerHTML === "Hide") {
+		instructionsBtn.innerHTML = "Show";
+	}
+};
+
 const initTabEventListeners = () => {
 	const tabs = document.querySelectorAll(".tab");
 	tabs.forEach((tab) => {
@@ -34,6 +50,14 @@ const initWindowEventListener = () => {
 	});
 };
 
+const initInstructionsEventListener = () => {
+	const instructionsBtn = document.getElementById("instructions-btn");
+	instructionsBtn.addEventListener("click", (event) => {
+		toggleInstructions();
+		toggleInstructionsBtnText();
+	});
+};
+
 const initApp = () => {
 	createForm("names");
 	const theme = new Theme("names");
@@ -41,16 +65,7 @@ const initApp = () => {
 	theme.changeTheme();
 	initTabEventListeners();
 	initWindowEventListener();
+	initInstructionsEventListener();
 };
 
 initApp();
-
-// FEATURE submit changes to update if new row was added
-
-// FEATURE dynamic delete button for last row - allow user
-// to delete first row if at least one other row exists
-
-// CSS make variables for theme colours so they can be easily changed
-// programmatically set theme colour?
-
-// Refactor printout and maybe theme to object-oriented

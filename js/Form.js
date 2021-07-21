@@ -80,7 +80,7 @@ export class Form {
 
 	validateForm() {
 		let validity = true;
-		const inputs = Array.from(document.getElementsByTagName("input"));
+		const inputs = document.querySelectorAll("input");
 		inputs.forEach((input) => {
 			if (!input.value) {
 				validity = false;
@@ -141,7 +141,7 @@ export class Form {
 	initAddNewRowListener() {
 		const addNewRowBtn = document.getElementById(`${this.type}FormNewRowBtn`);
 		addNewRowBtn.addEventListener("click", () => {
-			const rows = Array.from(document.querySelectorAll(`.${this.type}-form__row`));
+			const rows = document.querySelectorAll(`.${this.type}-form__row`);
 			if (rows.length > 0) {
 				const lastRowId = parseInt(rows[rows.length - 1].id.replace(/\D/g, "")); // regular expression to extract just the numbers from the ID of the last row
 				const nextRowId = lastRowId + 1;

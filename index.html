@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://kit.fontawesome.com/388073ed16.js" crossorigin="anonymous"></script>
+		<!-- <script src="https://kit.fontawesome.com/388073ed16.js" crossorigin="anonymous"></script> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -11,11 +11,9 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./css/normalize.css" type="text/css" />
-		<link rel="stylesheet" href="./css/base.css" type="text/css" />
-		<link rel="stylesheet" href="./css/themes.css" type="text/css" />
+		<link rel="stylesheet" href="./css/styles.css" type="text/css" />
+		<link rel="stylesheet" href="./css/media.css" type="text/css" />
 		<link rel="icon" href="./img/favicon.png" type="image/png" />
-		<!-- <link rel="stylesheet" href="./css/medias.css" type="text/css" />
-		<link rel="stylesheet" href="./css/print.css" type="text/css" media="print" /> -->
 		<title>Tracey</title>
 	</head>
 
@@ -73,9 +71,10 @@
 						Each child's sheet will start on a separate page.
 					</p>
 
-					<!-- <p>
-						Tracey does not support mobile versions of the Firefox web browser (but the desktop version works just fine!).
-					</p> -->
+					<p>
+						Tracey does not support mobile versions of the Firefox web browser - but the desktop version works just
+						fine!
+					</p>
 
 					<div class="options-img-container">
 						<img
@@ -106,31 +105,35 @@
 				</div>
 
 				<div class="instructions-area-box">
-					<h2 class="subheading">Instructions</h2>
-					<p>
+					<div class="instructions-div">
+						<h2 class="subheading">Instructions</h2>
+						<button class="instructions-btn" id="instructions-btn">Show</button>
+					</div>
+
+					<p class="instructions-para hide">
 						<span class="bold">Child Name (required):</span> Fill in the child's name to personalise their printed
 						worksheet. For the Names form, this is also what will be printed out for the child to trace.
 					</p>
 
-					<p>
+					<p class="instructions-para hide">
 						<span class="bold">Font Size (required):</span> Choose between large, medium or small font size (font
 						heights of 4cm, 3cm and 2cm respectively when printed).
 					</p>
-					<p>
+					<p class="instructions-para hide">
 						<span class="bold">Repeats (required):</span> How many times you want each name, word/sentence, alphabet or
 						set of numbers to be printed out for the particular child's worksheet.
 					</p>
-					<p>
-						<span class="bold">Words (Words form only):</span> The desired word or sentence to be printed out for the
-						child to trace. Required field (1-40 characters) for the names form.
+					<p class="instructions-para hide">
+						<span class="bold">Words (required on Words form only):</span> The desired word or sentence (1-40
+						characters) to be printed out for the child to trace.
 					</p>
-					<p>
-						<span class="bold">Case (Alphabet form only):</span> Specify whether you want the alphabet to be printed in
-						either upper or lower case for the child to trace. Required field for the alphabet form.
+					<p class="instructions-para hide">
+						<span class="bold">Case (required on Alphabet form only):</span> Specify whether you want the alphabet to be
+						printed in either upper or lower case for the child to trace.
 					</p>
-					<p>
-						<span class="bold">Numbers (Numbers form only):</span> Specify whether you want to print out the numbers
-						1-10 or 1-20 for the child to trace. Required field for the numbers form.
+					<p class="instructions-para hide">
+						<span class="bold">Numbers (required on Numbers form only):</span> Specify whether you want to print out the
+						numbers 1-10 or 1-20 for the child to trace.
 					</p>
 				</div>
 			</div>
