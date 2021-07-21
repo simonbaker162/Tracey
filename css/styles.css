@@ -323,8 +323,11 @@ SCREEN STYLING
 		font-family: "Pangolin", cursive;
 		color: red;
 		font-size: inherit;
-		margin: 0;
 		text-align: center;
+	}
+
+	.error-message {
+		margin-top: 1em;
 	}
 }
 

@@ -93,10 +93,6 @@ export class Form {
 		return validity;
 	}
 
-	errorForm() {
-		alert("Invalid form input");
-	}
-
 	addNewRow(id = 1) {
 		let newRowMarkup;
 		switch (this.type) {
