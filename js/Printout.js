@@ -46,14 +46,12 @@ export class Printout {
 				break;
 			case "words":
 				const word = document.getElementById(`wordsWord${i}`).value;
-				printArea.insertAdjacentHTML("beforeend", `<p>${name}</p>`);
 				for (let j = 1; j <= repeats; j++) {
 					this.printArea.insertAdjacentHTML("beforeend", `<p class="${size} para-print ${name}-${i}">${word}</p>`);
 				}
 				break;
 			case "alphabet":
 				const selectedCase = document.getElementById(`alphabetCase${i}`).value;
-				this.printArea.insertAdjacentHTML("beforeend", `<p>${name}</p>`);
 				for (let j = 1; j <= repeats; j++) {
 					if (selectedCase === "upper") {
 						this.printArea.insertAdjacentHTML(
@@ -70,7 +68,6 @@ export class Printout {
 				break;
 			case "numbers":
 				const selectedNumbers = document.getElementById(`numbersNumbers${i}`).value;
-				this.printArea.insertAdjacentHTML("beforeend", `<p>${name} ${name}-${i}</p>`);
 				for (let j = 1; j <= repeats; j++) {
 					if (selectedNumbers === "20") {
 						this.printArea.insertAdjacentHTML(
