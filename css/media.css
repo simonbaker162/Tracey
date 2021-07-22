@@ -700,7 +700,7 @@ DIFFERENT SCREEN WIDTHS
 	}
 
 	.container {
-		margin: 20rem;
+		margin: 15rem;
 	}
 
 	.heading-area-container {
@@ -817,7 +817,7 @@ DIFFERENT SCREEN WIDTHS
 	}
 
 	.container {
-		margin: 40rem;
+		margin: 35rem;
 	}
 
 	.heading-area-container {
@@ -965,8 +965,8 @@ AND PRINT PREVIEWS
 	.para-print {
 		font-family: "kg_primary_dotsregular", cursive;
 		padding: 0;
-		line-height: 100%;
-		margin: 0 0 10mm 0;
+		line-height: 80%;
+		margin: 10mm;
 		text-decoration: underline dotted black 0.5mm;
 		text-decoration-skip-ink: none;
 		word-wrap: break-word;
@@ -977,15 +977,15 @@ AND PRINT PREVIEWS
 	}
 
 	.para-print.large {
-		font-size: 40mm;
+		font-size: 45mm;
 	}
 
 	.para-print.medium {
-		font-size: 30mm;
+		font-size: 35mm;
 	}
 
 	.para-print.small {
-		font-size: 20mm;
+		font-size: 25mm;
 	}
 
 	.para-print.last-repeat {

@@ -109,10 +109,6 @@ export class Form {
 				newRowMarkup = numbersFormRowMarkup(id);
 		}
 		this.grid.insertAdjacentHTML("beforeend", newRowMarkup);
-		// if (id === 1) {
-		// 	const deleteBtn = document.getElementById(`${this.type}Delete${id}`);
-		// 	deleteBtn.style.display = "none"; // hide delete button for first row so user can't delete all rows
-		// }
 		this.initDeleteRowEventListener(id);
 	}
 
@@ -131,7 +127,7 @@ export class Form {
 		element.innerHTML = message;
 		setTimeout(() => {
 			element.innerHTML = "";
-		}, 2000);
+		}, 2500);
 	}
 
 	initAddNewRowListener() {
