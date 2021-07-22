@@ -27,37 +27,6 @@ body {
 	align-items: center;
 }
 
-/* LOADER */
-
-.loader {
-	display: none;
-	width: 10vh;
-	height: 10vh;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border: 1vh solid #85b0ff;
-	border-top: 1vh solid #3e82ff;
-	border-radius: 50%;
-	animation: loading 2s linear infinite;
-	z-index: 100;
-}
-
-.loading-background {
-	display: none;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(30, 30, 30, 0.7);
-	z-index: 50;
-}
-
-.loader.active,
-.loading-background.active {
-	display: block;
-}
-
 /* 
 /////////////////////////////////////////////////////
 SCREEN STYLING
@@ -111,6 +80,8 @@ SCREEN STYLING
 
 	.instructions-div {
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.instructions-para.hide {
@@ -168,6 +139,10 @@ SCREEN STYLING
 	.tab:hover {
 		transform: translateY(-1px);
 		cursor: pointer;
+	}
+
+	.tab:active {
+		transform: translateY(10px);
 	}
 
 	.names-tab {
@@ -283,7 +258,15 @@ SCREEN STYLING
 		transition: all 0.1s;
 	}
 
+	.add-row-btn:active,
+	.delete-row-btn:active,
+	.submit-btn:active,
+	.instructions-btn:active {
+		transform: translateY(-3px);
+	}
+
 	.instructions-btn {
+		padding: 0.5rem 1rem;
 		margin-left: 2.5rem;
 	}
 
@@ -329,6 +312,42 @@ SCREEN STYLING
 	.error-message {
 		margin-top: 1em;
 	}
+
+	/* LOADING SPINNER */
+
+	.loading-background {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(30, 30, 30, 0.7);
+		z-index: 50;
+	}
+
+	.spinner-container {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 100;
+	}
+
+	.spinner {
+		width: 10vh;
+		height: 10vh;
+		border: 1vh solid #85b0ff;
+		border-top: 1vh solid #3e82ff;
+		border-radius: 50%;
+		animation: rotating 2s linear infinite;
+	}
+
+	.spinner-container.active,
+	.loading-background.active {
+		display: block;
+	}
 }
 
 /* 
@@ -337,7 +356,7 @@ ANIMATIONS
 /////////////////////////////////////////////////////
 */
 
-@keyframes loading {
+@keyframes rotating {
 	0% {
 		transform: rotate(0deg);
 	}

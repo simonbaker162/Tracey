@@ -143,8 +143,8 @@ export const alphabetFormRowMarkup = (id) => {
     </div>
     <div class="alphabet-form__column medium-column">
       <select class="select-case" id="alphabetCase${id}">
-        <option value="upper">Upper Case</option>
-        <option "value="lower">Lower Case</option>
+        <option value="upper">Upper</option>
+        <option "value="lower">Lower</option>
       </select>
     </div>
     <div class="alphabet-form__column medium-column">

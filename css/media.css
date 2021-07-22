@@ -327,10 +327,6 @@ DIFFERENT SCREEN WIDTHS
 		font-size: 1.6rem;
 	}
 
-	.instructions-area-box {
-		padding: 10rem 7.5rem;
-	}
-
 	.children-img-container {
 		width: 25rem;
 		height: 12.5rem;
@@ -945,7 +941,8 @@ AND PRINT PREVIEWS
 	h3,
 	form,
 	p:not(.para-print),
-	.tab {
+	.tab,
+	.instructions-btn {
 		display: none;
 	}
 

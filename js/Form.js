@@ -44,9 +44,9 @@ export class Form {
 	print() {
 		const printout = new Printout(this.type);
 		const loadingBackground = document.getElementById("loading-background");
-		const loader = document.getElementById("loader");
+		const spinnerContainer = document.getElementById("spinner-container");
 		loadingBackground.classList.add("active");
-		loader.classList.add("active");
+		spinnerContainer.classList.add("active");
 		printout.generateMarkup();
 
 		/////////////////////////////
@@ -59,7 +59,7 @@ export class Form {
 		// OR USE THE FONT SOMEWHERE ELSE!!!
 		// PREVIEW IMAGE OF A RESOURCE??????
 		setTimeout(() => {
-			loader.classList.remove("active");
+			spinnerContainer.classList.remove("active");
 			printout.promptPrint();
 		}, 2500);
 
