@@ -933,6 +933,7 @@ AND PRINT PREVIEWS
 		display: block;
 		margin: 0;
 		padding: 0;
+		color: black;
 	}
 
 	img,
@@ -956,17 +957,17 @@ AND PRINT PREVIEWS
 
 	.personalise {
 		display: block;
-		font-family: "Delius", cursive;
+		font-family: "Roboto", sans-serif;
 		font-size: 10mm;
 		text-align: center;
 	}
 
 	.para-print {
-		font-family: "Itim", cursive;
+		font-family: "kg_primary_dotsregular", cursive;
 		padding: 0;
 		line-height: 100%;
 		margin: 0 0 10mm 0;
-		text-decoration: underline dotted #333 1mm;
+		text-decoration: underline dotted black 0.5mm;
 		text-decoration-skip-ink: none;
 		word-wrap: break-word;
 		position: relative;

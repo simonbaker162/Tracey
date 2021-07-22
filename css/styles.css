@@ -1,3 +1,11 @@
+@font-face {
+	font-family: "kg_primary_dotsregular";
+	src: url("../fonts/kgprimarydots-pl0e-webfont.woff2") format("woff2"),
+		url("../fonts/kgprimarydots-pl0e-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* 
 /////////////////////////////////////////////////////
 BASIC SETUP
@@ -103,7 +111,6 @@ SCREEN STYLING
 
 	.heading,
 	.subheading {
-		font-family: "Pangolin", cursive;
 		padding-top: 5rem;
 		margin: 0;
 		text-align: center;
@@ -111,8 +118,13 @@ SCREEN STYLING
 
 	.heading {
 		color: var(--theme-color-names);
+		font-family: "kg_primary_dotsregular", sans-serif;
 		transition: all 1s;
 		opacity: 0;
+	}
+
+	.subheading {
+		font-family: "Pangolin", sans-serif;
 	}
 
 	/* HEADING & SUBHEADING STYLING FOR ACTIVE THEME */
@@ -130,7 +142,7 @@ SCREEN STYLING
 	}
 
 	.tab {
-		font-family: "Pangolin", cursive;
+		font-family: "Pangolin", sans-serif;
 		font-weight: 700;
 		color: #333;
 		border-right: 2px solid #999;
@@ -230,7 +242,7 @@ SCREEN STYLING
 	.words-form__heading,
 	.alphabet-form__heading,
 	.numbers-form__heading {
-		font-family: "Pangolin", cursive;
+		font-family: "Pangolin", sans-serif;
 		color: #333;
 	}
 
@@ -303,7 +315,7 @@ SCREEN STYLING
 
 	#delete-btn-column,
 	#form-error-message {
-		font-family: "Pangolin", cursive;
+		font-family: "Roboto", sans-serif;
 		color: red;
 		font-size: inherit;
 		text-align: center;
