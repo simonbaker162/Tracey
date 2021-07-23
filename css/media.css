@@ -44,7 +44,7 @@ DIFFERENT SCREEN WIDTHS
 		width: 35vw;
 	}
 	.landscape-message-heading {
-		font-family: "Pangolin", cursive;
+		font-family: "kg_primary_dotsregular", cursive;
 		margin: 0;
 		color: #85b0ff;
 		font-size: 4rem;
@@ -967,7 +967,15 @@ AND PRINT PREVIEWS
 		padding: 0;
 		line-height: 80%;
 		margin: 10mm;
-		text-decoration: underline dotted black 0.5mm;
+		text-decoration-line: underline;
+		-webkit-text-decoration-line: underline;
+		text-decoration-style: solid;
+		-webkit-text-decoration-style: solid;
+		text-decoration-color: #777;
+		-webkit-text-decoration-color: #777;
+		text-decoration-thickness: 1mm;
+		-webkit-text-decoration-thickness: 1mm;
+		text-decoration-skip: none;
 		text-decoration-skip-ink: none;
 		word-wrap: break-word;
 		position: relative;
@@ -977,15 +985,15 @@ AND PRINT PREVIEWS
 	}
 
 	.para-print.large {
-		font-size: 45mm;
+		font-size: 40mm;
 	}
 
 	.para-print.medium {
-		font-size: 35mm;
+		font-size: 30mm;
 	}
 
 	.para-print.small {
-		font-size: 25mm;
+		font-size: 20mm;
 	}
 
 	.para-print.last-repeat {
