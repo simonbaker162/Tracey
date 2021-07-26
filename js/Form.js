@@ -47,33 +47,18 @@ export class Form {
 		const spinnerContainer = document.getElementById("spinner-container");
 		loadingBackground.classList.add("active");
 		spinnerContainer.classList.add("active");
+		if (printout.printArea.innerHTML !== "") {
+			printout.clearPrintArea();
+		}
 		printout.generateMarkup();
 
-		/////////////////////////////
-		// Due to fonts not loading,
-		// best solution is probably
-		// a timeout with a loading
-		// spinner so the user at least
-		// thinks the application isn't
-		// hanging
-		// OR USE THE FONT SOMEWHERE ELSE!!!
-		// PREVIEW IMAGE OF A RESOURCE??????
 		setTimeout(() => {
 			spinnerContainer.classList.remove("active");
 			printout.promptPrint();
+			loadingBackground.classList.remove("active");
 		}, 2500);
 
-		/////////////////////////
-		///////// CHANGE BELOW TO AN
-		///////// EVENT LISTENER
-		///////// IMPLEMENTATION
-		////////////////////////
-
-		// setTimeout(() => {
-		// 	printout.clearPrintArea();
-		// }, 8000);
 		window.onafterprint = (event) => {
-			loadingBackground.classList.remove("active");
 			printout.clearPrintArea();
 		};
 	}

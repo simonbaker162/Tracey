@@ -58,6 +58,18 @@ const initInstructionsEventListener = () => {
 	});
 };
 
+// const initGoBackEventListener = () => {
+// 	const goBackBtn = document.getElementById("go-back");
+// 	goBackBtn.addEventListener("click", (event) => {
+// 		goBack();
+// 	});
+// };
+
+// const goBack = () => {
+// 	const loadingBackground = document.getElementById("loading-background");
+// 	loadingBackground.classList.remove("active");
+// };
+
 const initApp = () => {
 	createForm("names");
 	const theme = new Theme("names");
@@ -66,6 +78,7 @@ const initApp = () => {
 	initTabEventListeners();
 	initWindowEventListener();
 	initInstructionsEventListener();
+	// initGoBackEventListener();
 };
 
 initApp();

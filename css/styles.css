@@ -360,6 +360,16 @@ SCREEN STYLING
 	.loading-background.active {
 		display: block;
 	}
+
+	.go-back {
+		position: fixed;
+		top: 20%;
+		left: 30vw;
+		width: 40vw;
+		background-color: #eee;
+		padding: 5rem;
+		border-radius: 1000px;
+	}
 }
 
 /* 
