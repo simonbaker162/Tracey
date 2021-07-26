@@ -1,14 +1,14 @@
 import {
-	alphabetFormRowMarkup,
 	basicFormMarkup,
 	namesFormRowMarkup,
-	numbersFormRowMarkup,
-	wordsFormRowMarkup
+	wordsFormRowMarkup,
+	alphabetFormRowMarkup,
+	numbersFormRowMarkup
 } from "./markup.js";
 
 import { Printout } from "./Printout.js";
 
-// available arguments for Form constructor parameter:
+// available arguments for Form constructor type parameter:
 // "names", "words", "alphabet", "numbers"
 export class Form {
 	constructor(type) {
@@ -43,24 +43,32 @@ export class Form {
 
 	print() {
 		const printout = new Printout(this.type);
+		this.printingUXFlow("before");
+		this.checkPrintAreaIsEmpty(printout);
+		printout.generateMarkup();
+		setTimeout(() => {
+			this.printingUXFlow("after", printout);
+		}, 2000);
+	}
+
+	printingUXFlow(stage, printout) {
 		const loadingBackground = document.getElementById("loading-background");
 		const spinnerContainer = document.getElementById("spinner-container");
-		loadingBackground.classList.add("active");
-		spinnerContainer.classList.add("active");
-		if (printout.printArea.innerHTML !== "") {
-			printout.clearPrintArea();
+		if (stage === "before") {
+			loadingBackground.classList.add("active");
+			spinnerContainer.classList.add("active");
 		}
-		printout.generateMarkup();
-
-		setTimeout(() => {
+		if (stage === "after") {
 			spinnerContainer.classList.remove("active");
 			printout.promptPrint();
 			loadingBackground.classList.remove("active");
-		}, 2500);
+		}
+	}
 
-		window.onafterprint = (event) => {
+	checkPrintAreaIsEmpty(printout) {
+		if (printout.printArea.innerHTML !== "") {
 			printout.clearPrintArea();
-		};
+		}
 	}
 
 	validateForm() {

@@ -1,8 +1,11 @@
 export class Printout {
+	// available arguments for Printout constructor's type parameter
+	// depend on Form type: "names", "words", "alphabet", "numbers"
 	constructor(type) {
 		this.type = type;
 		this.numRows = document.querySelectorAll(`.${this.type}-form__row`).length;
 		this.printArea = document.getElementById("printArea");
+		this.initWindowPrintEventListener();
 	}
 
 	promptPrint() {
@@ -82,5 +85,9 @@ export class Printout {
 					}
 				}
 		}
+	}
+
+	initWindowPrintEventListener() {
+		window.addEventListener("onafterprint", this.clearPrintArea);
 	}
 }

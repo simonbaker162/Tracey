@@ -41,6 +41,7 @@ const initTabEventListeners = () => {
 
 const initWindowEventListener = () => {
 	let windowWidth = window.innerWidth;
+	console.log(windowWidth);
 	window.addEventListener("resize", (event) => {
 		const newWidth = event.target.innerWidth;
 		if (windowWidth < 568 && newWidth >= 568) {
@@ -58,18 +59,6 @@ const initInstructionsEventListener = () => {
 	});
 };
 
-// const initGoBackEventListener = () => {
-// 	const goBackBtn = document.getElementById("go-back");
-// 	goBackBtn.addEventListener("click", (event) => {
-// 		goBack();
-// 	});
-// };
-
-// const goBack = () => {
-// 	const loadingBackground = document.getElementById("loading-background");
-// 	loadingBackground.classList.remove("active");
-// };
-
 const initApp = () => {
 	createForm("names");
 	const theme = new Theme("names");
@@ -78,7 +67,6 @@ const initApp = () => {
 	initTabEventListeners();
 	initWindowEventListener();
 	initInstructionsEventListener();
-	// initGoBackEventListener();
 };
 
 initApp();
